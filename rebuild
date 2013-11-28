@@ -1,0 +1,2 @@
+#!/bin/sh
+xbuild Kumiko.Todo.sln /p:SolutionDir="`pwd`/" /t:Rebuild
