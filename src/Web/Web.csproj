@@ -10,7 +10,7 @@
 		<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
 		<FileAlignment>512</FileAlignment>
 	</PropertyGroup>
-	<Import Project="$(SolutionDir)\src\Shared.csproj" />
+	<Import Project="$(SolutionDir)src\Shared.csproj" />
 	<ItemGroup>
 		<Reference Include="System" />
 		<Reference Include="System.Core" />
