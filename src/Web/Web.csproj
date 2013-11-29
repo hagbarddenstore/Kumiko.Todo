@@ -25,6 +25,7 @@
 	<ItemGroup>
 		<Compile Include="Program.cs" />
 		<Compile Include="Modules\HomeModule.cs" />
+		<Compile Include="Modules\ApiModule.cs" />
 	</ItemGroup>
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

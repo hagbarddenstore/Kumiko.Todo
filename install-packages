@@ -1,3 +1,4 @@
 #!/bin/bash
 nuget Install -OutputDirectory packages -Version 0.21.1 Nancy
 nuget Install -OutputDirectory packages -Version 0.21.1 Nancy.Hosting.Self
+nuget Install -OutputDirectory packages -Version 1.8.3 mongocsharpdriver
