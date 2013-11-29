@@ -25,7 +25,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="Program.cs" />
-		<Compule Include="Modules\HomeModule.cs" />
+		<Compile Include="Modules\HomeModule.cs" />
 	</ItemGroup>
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
