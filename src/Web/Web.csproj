@@ -10,16 +10,17 @@
 		<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
 		<FileAlignment>512</FileAlignment>
 	</PropertyGroup>
-	<Import Project="$(SolutionDir)src\Shared.csproj" />
+	<Import Condition="HasTrailingSlash('$(SolutionDir)')" Project="$(SolutionDir)src\Shared.csproj" />
+	<Import Condition="!HasTrailingSlash('$(SolutionDir)')" Project="$(SolutionDir)\src\Shared.csproj" />
 	<ItemGroup>
 		<Reference Include="System" />
 		<Reference Include="System.Core" />
 		<Reference Include="System.Configuration" />
 		<Reference Include="Nancy">
-			<HintPath>$(SolutionDir)packages\Nancy.0.21.1\lib\net40\Nancy.dll</HintPath>
+			<HintPath>$(PackagesDir)\Nancy.0.21.1\lib\net40\Nancy.dll</HintPath>
 		</Reference>
 		<Reference Include="Nancy.Hosting.Self">
-			<HintPath>$(SolutionDir)packages\Nancy.Hosting.Self.0.21.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+			<HintPath>$(PackagesDir)\Nancy.Hosting.Self.0.21.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>

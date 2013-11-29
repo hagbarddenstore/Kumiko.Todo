@@ -1,4 +1,11 @@
 #!/bin/bash
+if [[ ! -e packages ]]; then
+	mkdir packages
+elif [[ ! -d packages ]]; then
+	echo "packages already exists, but is not a directory."
+	exit 1
+fi
+
 nuget Install -OutputDirectory packages -Version 0.21.1 Nancy
 nuget Install -OutputDirectory packages -Version 0.21.1 Nancy.Hosting.Self
 nuget Install -OutputDirectory packages -Version 1.8.3 mongocsharpdriver
