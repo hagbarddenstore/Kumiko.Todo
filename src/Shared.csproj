@@ -22,4 +22,10 @@
 		<CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
 		<CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
 	</PropertyGroup>
+	<PropertyGroup Condition="HasTrailingSlash('$(SolutionDir)')">
+		<PackagesDir>$(SolutionDir)packages</PackagesDir>
+	</PropertyGroup>
+	<PropertyGroup Condition="!HasTrailingSlash('$(SolutionDir)')">
+		<PackagesDir>$(SolutionDir)\packages</PackagesDir>
+	</PropertyGroup>
 </Project>

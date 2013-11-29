@@ -3,10 +3,10 @@
 	<PropertyGroup>
 		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{1FC5D33C-77A7-43D3-B2FB-9C7350832F64}</ProjectGuid>
-		<OutputType>Exe</OutputType>
-		<RootNamespace>Kumiko.Todo.Web</RootNamespace>
-		<AssemblyName>Kumiko.Todo.Web</AssemblyName>
+		<ProjectGuid>{874E2D9B-16FF-4DDE-9069-0DBBF9824E1A}</ProjectGuid>
+		<OutputType>Library</OutputType>
+		<RootNamespace>Kumiko.Todo.Domain</RootNamespace>
+		<AssemblyName>Kumiko.Todo.Domain</AssemblyName>
 		<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
 		<FileAlignment>512</FileAlignment>
 	</PropertyGroup>
@@ -15,16 +15,9 @@
 		<Reference Include="System" />
 		<Reference Include="System.Core" />
 		<Reference Include="System.Configuration" />
-		<Reference Include="Nancy">
-			<HintPath>$(SolutionDir)packages\Nancy.0.21.1\lib\net40\Nancy.dll</HintPath>
-		</Reference>
-		<Reference Include="Nancy.Hosting.Self">
-			<HintPath>$(SolutionDir)packages\Nancy.Hosting.Self.0.21.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
-		</Reference>
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Include="Program.cs" />
-		<Compule Include="Modules\HomeModule.cs" />
+		<Compile Include="Items\Item.cs" />
 	</ItemGroup>
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
