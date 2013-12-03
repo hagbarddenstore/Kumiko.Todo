@@ -10,14 +10,25 @@
 		<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
 		<FileAlignment>512</FileAlignment>
 	</PropertyGroup>
-	<Import Project="$(SolutionDir)src\Shared.csproj" />
+	<Import Condition="HasTrailingSlash('$(SolutionDir)')" Project="$(SolutionDir)src\Shared.csproj" />
+	<Import Condition="!HasTrailingSlash('$(SolutionDir)')" Project="$(SolutionDir)\src\Shared.csproj" />
 	<ItemGroup>
 		<Reference Include="System" />
 		<Reference Include="System.Core" />
 		<Reference Include="System.Configuration" />
+		<Reference Include="MongoDB.Bson">
+			<HintPath>$(PackagesDir)\mongocsharpdriver.1.8.3/lib/net35/MongoDB.Bson.dll</HintPath>
+		</Reference>
+		<Reference Include="MongoDB.Driver">
+			<HintPath>$(PackagesDir)\mongocsharpdriver.1.8.3/lib/net35/MongoDB.Driver.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 	<ItemGroup>
+		<Compile Include="TimeFactory.cs" />
 		<Compile Include="Items\Item.cs" />
+		<Compile Include="Items\Status.cs" />
+		<Compile Include="Items\IItemsRepository.cs" />
+		<Compile Include="Items\Implementations\MongoDbItemsRepository.cs" />
 	</ItemGroup>
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
